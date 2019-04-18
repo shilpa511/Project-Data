@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health is Wealth</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- menu styles -->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap-4-latest.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="font-awesome/web-fonts-with-css/css/fontawesome-all.css" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <script src="js/jquery.min.js" type="text/jscript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+</head>
+
+<!--- font-family: 'Josefin Sans', sans-serif:-->
+
+<body data-ng-controller="testController">
+    <section class="header_section">
+        <!-- Main container -->
+        <div class="container">
+            <!-- Blueprint header -->
+            <div class="row">
+                <div class="col-sm-2">
+                    <a class="logo_section" href="index.html" data-aos="fade-right">
+                        <img src="images/sticky_logo.png" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-7">
+                    <span class="menu_tag">Menu</span>
+                    <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+                    <nav id="ml-menu" class="menu">
+                        <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+                        <div class="menu__wrap">
+                            <ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Authentic Products </a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Refer & Earn</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Help</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Contact Us</a></li>
+                            </ul>
+                            <!-- Submenu 1 -->
+                            <ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Vegetables">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Stalk Vegetables</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Cabbages</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Salad Greens</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Mushrooms</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1-1" aria-owns="submenu-1-1" href="#">Sale %</a></li>
+                            </ul>
+                            <!-- Submenu 1-1 -->
+                            <ul data-menu="submenu-1-1" id="submenu-1-1" class="menu__level" tabindex="-1" role="menu" aria-label="Sale %">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dried Veggies</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Our Brand</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Homemade</a></li>
+                            </ul>
+                            <!-- Submenu 2 -->
+                            <ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Fruits">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Citrus Fruits</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Berries</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">Special Selection</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Tropical Fruits</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Melons</a></li>
+                            </ul>
+                            <!-- Submenu 2-1 -->
+                            <ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Exotic Mixes</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Pick</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+                            </ul>
+                            <!-- Submenu 3 -->
+                            <ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Grains">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Buckwheat</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Millet</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quinoa</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Rice</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Durum Wheat</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li>
+                            </ul>
+                            <!-- Submenu 3-1 -->
+                            <ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Flour Packs</a></li>
+                            </ul>
+                            <!-- Submenu 4 -->
+                            <ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Mylk &amp; Drinks">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Grain Mylks</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Seed Mylks</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylks</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nutri Drinks</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
+                            </ul>
+                            <!-- Submenu 4-1 -->
+                            <ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level" tabindex="-1" role="menu" aria-label="Selection">
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+                                <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Allergy Free</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
+                <div class="col-sm-3">
+                    <ul class="right_menu_list">
+                        <li class="dro_sign_menu">
+                            <span>Sign In</span>
+                            <div class="drop_sign" data-aos="fade-up">
+                                <div class="create_drop">
+                                    <p>View your recent orders, track shipping and manage returns</p>
+                                    <button class="nw_create_btn">Create Account</button>
+                                </div>
+                                <div class="sign_drop">
+                                    <button class="sign_btn">Sign In</button>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">Cart<span class="count">2</span></a>
+                        </li>
+                        <li>
+                            <div class=" navbar-form navbar-right">
+                                <a href="#search" class="search-form-tigger " data-toggle="search-form"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-form-wrapper cutm_wrapper" >
+                    <form class="search-form" id="" action="">
+                        <div class="input-group">
+                            <input type="text" name="search" class="search form-control" placeholder="Search">
+                            <span class="input-group-addon" id="basic-addon2"><i class="fas fa-search" aria-hidden="true"></i>
+                     </span>
+                            <span class="input-group-addon search-close" id="basic-addon2"><i class="fas fa-window-close" aria-hidden="true"></i>
+                     </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <!-- Ajax loaded content here -->
+            </div>
+        </div>
+    </section>
+    <section class="search-box">
+        <div class="container-fluid">
+            <div class="row">
+                <section class="search-sec">
+                        <form action="#" method="post" novalidate="novalidate">
+                            <div class="row"><!--ng-app="" ng-init="firstName=''"-->
+                                <div class="col-lg-12">
+                                    <h3 class="text-center">Health Store in City</h3>
+                                    <div class="row" >
+                                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                            <select type="text" class="form-control search-slt" ng-model="countrySrc" ng-options="country for (country, states) in countries" value="Select Country" ng-change="GetSelectedCountry()">
+                                                <option value='' selected="selected">Select Country </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                            <select type="text" class="form-control search-slt" id="state" ng-disabled="!countrySrc" ng-model="stateSrc" ng-options="state for (state,city) in countrySrc" ng-change="GetSelectedState()">
+                                                <option value=''>Select State</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-12 p-0" >
+                                            <select type="text" class="form-control search-slt" ng-disabled="!countrySrc || !stateSrc" ng-model="city" ng-options="city for city in stateSrc" >
+                                                <option value=''>Select City</option>
+                                                <option>Indore</option>
+                                                <option>Bhopal</option>
+                                                <option>Mumbai</option>
+                                                <option>Pune</option>
+                                                <option>Dehli</option>
+                                                <option>Goa</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                            <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                </section>
+
+                <div class="col-md-12 listing-block">
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media_cutm">
+                        <div class="location_details">
+                            <div class="fav-box">
+                                <img class="img-fluid" src="images/location.jpg" alt="Generic placeholder image">
+                            </div>
+                            
+                            <div class="media-body-cust pl-3">
+                                <div class="price">ABCD Store</div>
+                                <div class="address"><p><i class="fas fa-map-marker-alt"></i> Indore Airport, Indore, Madhya Pradesh</p>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fas fa-map-signs"></i> 3.5KM</span>
+                                    <span> <i class="fas fa-phone-volume"></i> +91123456789</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 map-box mx-0 px-0">
+                    <iframe width="100%" height="495" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14720.567031951707!2d75.9172903!3d22.722971849999997!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1555523927494!5m2!1sen!2sin"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script>
+        $(function() {
+            $('.listing-block').slimScroll({
+                height: '500px'
+            });
+        });
+    </script>
+
+    <!-- /view -->
+    <!---------Js------------>
+    <script src="js/bootstrap.min.js" type="text/jscript"></script>
+    <!-- 
+<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script> -->
+
+    <!---------slider Js------------>
+
+    <script src="js/owl.carousel.js" type="text/jscript"></script>
+    <script src="js/owl_carousel_caption.js" type="text/jscript"></script>
+
+    <script src="js/classie.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        (function() {
+            var menuEl = document.getElementById('ml-menu'),
+                mlmenu = new MLMenu(menuEl, {
+                    // breadcrumbsCtrl : true, // show breadcrumbs
+                    // initialBreadcrumb : 'all', // initial breadcrumb text
+                    backCtrl: false, // show back button
+                    // itemsDelayInterval : 60, // delay between each menu item sliding animation
+                    onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+                });
+
+            // mobile menu toggle
+            var openMenuCtrl = document.querySelector('.action--open'),
+                closeMenuCtrl = document.querySelector('.action--close');
+
+            openMenuCtrl.addEventListener('click', openMenu);
+            closeMenuCtrl.addEventListener('click', closeMenu);
+
+            function openMenu() {
+                classie.add(menuEl, 'menu--open');
+                closeMenuCtrl.focus();
+            }
+
+            function closeMenu() {
+                classie.remove(menuEl, 'menu--open');
+                openMenuCtrl.focus();
+            }
+
+            // simulate grid content loading
+            var gridWrapper = document.querySelector('.content');
+
+            function loadDummyData(ev, itemName) {
+                ev.preventDefault();
+
+                closeMenu();
+                gridWrapper.innerHTML = '';
+                classie.add(gridWrapper, 'content--loading');
+                setTimeout(function() {
+                    classie.remove(gridWrapper, 'content--loading');
+                    gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+                }, 700);
+            }
+        })();
+    </script>
+
+    <script>
+        $('.slider_cutm_sp .owl-carousel').owlCarousel({
+            loop: true,
+            autoPlay: true,
+            margin: 0,
+            nav: true,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+    </script>
+    <script>
+        $('.Pdocut_trding .owl-carousel').owlCarousel({
+            loop: true,
+            autoPlay: true,
+            margin: 10,
+            nav: true,
+            navText: ["<span class='show-for-sr'><img src='images/left_arrow.svg' /></span>", "<span class='show-for-sr'><img src='images/right_arrow.svg' /></span>"],
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('[data-toggle=search-form]').click(function() {
+                $('.search-form-wrapper').toggleClass('open');
+                $('.search-form-wrapper .search').focus();
+                $('html').toggleClass('search-form-open');
+            });
+            $('[data-toggle=search-form-close]').click(function() {
+                $('.search-form-wrapper').removeClass('open');
+                $('html').removeClass('search-form-open');
+            });
+            $('.search-form-wrapper .search').keypress(function(event) {
+                if ($(this).val() == "Search") $(this).val("");
+            });
+
+            $('.search-close').click(function(event) {
+                $('.search-form-wrapper').removeClass('open');
+                $('html').removeClass('search-form-open');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.dro_sign_menu span').click(function() {
+                $('.dro_sign_menu').toggleClass('drop_menu_open');
+            });
+            $('.right_menu_list li.dro_sign_menu').hover(function() {
+                $('.dro_sign_menu').toggleClass('drop_menu_open');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // executes when HTML-Document is loaded and DOM is ready
+
+            // breakpoint and up  
+            $(window).resize(function() {
+                if ($(window).width() >= 980) {
+
+                    // when you hover a toggle show its dropdown menu
+                    $(".navbar .dropdown-toggle").hover(function() {
+                        $(this).parent().toggleClass("show");
+                        $(this).parent().find(".dropdown-menu").toggleClass("show");
+                    });
+
+                    // hide the menu when the mouse leaves the dropdown
+                    $(".navbar .dropdown-menu").mouseleave(function() {
+                        $(this).removeClass("show");
+                    });
+
+                    // do something here
+                }
+            });
+
+            // document ready  
+        });
+        $(".navbar .dropdown-toggle").click(function() {
+            $(this).parent().toggleClass("show");
+            $(this).parent().find(".dropdown-menu").toggleClass("show");
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            /* 1. Visualizing things on Hover - See next part for action on click */
+            $('#stars li').on('mouseover', function() {
+                var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+
+                // Now highlight all the stars that's not after the current hovered star
+                $(this).parent().children('li.star').each(function(e) {
+                    if (e < onStar) {
+                        $(this).addClass('hover');
+                    } else {
+                        $(this).removeClass('hover');
+                    }
+                });
+
+            }).on('mouseout', function() {
+                $(this).parent().children('li.star').each(function(e) {
+                    $(this).removeClass('hover');
+                });
+            });
+
+            /* 2. Action to perform on click */
+            $('#stars li').on('click', function() {
+                var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+                var stars = $(this).parent().children('li.star');
+
+                for (i = 0; i < stars.length; i++) {
+                    $(stars[i]).removeClass('selected');
+                }
+
+                for (i = 0; i < onStar; i++) {
+                    $(stars[i]).addClass('selected');
+                }
+
+                // JUST RESPONSE (Not needed)
+                var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+                var msg = "";
+                if (ratingValue > 1) {
+                    msg = "Thanks! You rated this " + ratingValue + " stars.";
+                } else {
+                    msg = "We will improve ourselves. You rated this " + ratingValue + " stars.";
+                }
+                responseMessage(msg);
+
+            });
+
+        });
+
+        function responseMessage(msg) {
+            $('.success-box').fadeIn(200);
+            $('.success-box div.text-message').html("<span>" + msg + "</span>");
+        }
+    </script>
+    <script>
+        $(".btn_fav_icon .far.fa-heart").click(function() {
+            $(".btn_fav_icon i").addClass("fas");
+            $(".btn_fav_icon i").removeClass("far");
+        });
+        $(".btn_fav_icon .fas.fa-heart").click(function() {
+            $(".btn_fav_icon i").addClass("far");
+            $(".btn_fav_icon i").removeClass("fas");
+        });
+    </script>
+
+
+    <script>
+    angular
+      .module('myApp', [])
+      .run(function($rootScope) {
+        $rootScope.title = 'myTest Page';
+      })
+      .controller('testController', ['$scope',
+        function($scope) {
+
+
+          $scope.countries = {
+
+            'USA': {
+              'Alabama': ['Montgomery', 'Birmingham'],
+              'California': ['Sacramento', 'Fremont'],
+              'Illinois': ['Springfield', 'Chicago']
+            },
+            'India': {
+              'Maharashtra': ['Pune', 'Mumbai', 'Nagpur', 'Akola'],
+              'Madhya Pradesh': ['Indore', 'Bhopal', 'Jabalpur'],
+              'Rajasthan': ['Jaipur', 'Ajmer', 'Jodhpur']
+            },
+            'Australia': {
+              'New South Wales': ['Sydney'],
+              'Victoria': ['Melbourne']
+            }
+          };
+
+          $scope.GetSelectedCountry = function() {
+            $scope.strCountry = $scope.countrySrc;
+          };
+          $scope.GetSelectedState = function() {
+            $scope.strState = $scope.stateSrc;
+          };
+        }
+      ])
+  </script>
+
+
+
+
+
+</body>
+
+</html>
